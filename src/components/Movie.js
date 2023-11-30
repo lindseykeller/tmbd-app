@@ -6,12 +6,13 @@ function Movie() {
     const [searchQuery, setSearchQuery] = useState("");
 
     //for search tbb later
-    const API_KEY = "10940971fec2e5fb49d3d2e4797d9da5";
-    const discoverEndpoint = `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}`;
-    const searchEndpoint = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${searchQuery}`
-    const endpoints = searchQuery ? searchEndpoint : discoverEndpoint;
+   
 
     const getMovie = () => {  
+        const API_KEY = "10940971fec2e5fb49d3d2e4797d9da5";
+        const discoverEndpoint = `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}`;
+        const searchEndpoint = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${searchQuery}`
+        const endpoints = searchQuery ? searchEndpoint : discoverEndpoint;
         const options = {
        method: 'GET',
        headers: {
@@ -30,7 +31,7 @@ function Movie() {
 
         useEffect(() => {
            getMovie();
-       }, [])
+       }, [searchQuery])
    
        console.log(movieList);
         return (
