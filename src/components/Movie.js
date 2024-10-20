@@ -75,7 +75,8 @@ function Movie() {
               <>
                 <div className="filtersContainer">
                  <div className="searchBar">
-                  <input type="text" placeholder="Search" value={searchQuery}
+                    <label for ="search">Search by movie title</label>
+                  <input type="text" id ="search" placeholder="Search" value={searchQuery}
                    onChange = {(e) => {
                     setSearchQuery(e.target.value)
                     console.log(e.target.value)
