@@ -25,6 +25,10 @@ const MuiChipCustom = styled(Chip)(() => ({
     '&&:hover': {
       backgroundColor: 'purple',
       
+    },
+    '&&:focus': {
+      border: '3px solid white',
+      
     }
  }));
 
