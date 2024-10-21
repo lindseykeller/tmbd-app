@@ -235,3 +235,132 @@ width: 400px;
     }
   }
 }
+
+//movie.js
+//
+//
+//
+$primary-color: #1e1e1e; // Dark background color
+$secondary-color: #ffffff; // Light text color
+$accent-color: #ff4081; // Accent color for buttons and highlights
+$focus-ring-color: rgba(255, 64, 129, 0.6); // Focus ring color for accessibility
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: $primary-color;
+  color: $secondary-color;
+  margin: 0;
+  padding: 0;
+}
+
+.filtersContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-bottom: 2px solid $accent-color;
+
+  .searchBar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    label {
+      margin-right: 10px;
+      font-weight: bold;
+    }
+
+    input {
+      padding: 10px;
+      border: 1px solid $secondary-color;
+      border-radius: 4px;
+      background-color: transparent;
+      color: $secondary-color;
+      outline: none;
+
+      &:focus {
+        border-color: $accent-color;
+        box-shadow: 0 0 5px $focus-ring-color;
+      }
+    }
+
+    button {
+      margin-left: 10px;
+      padding: 10px 15px;
+      background-color: $accent-color;
+      color: $secondary-color;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      outline: none;
+
+      &:hover {
+        background-color: lighten($accent-color, 10%);
+      }
+
+      &:focus {
+        box-shadow: 0 0 5px $focus-ring-color;
+      }
+    }
+  }
+
+  .genre_col {
+    h2 {
+      margin: 0;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.movieContainer {
+  display: flex;
+  flex-wrap: wrap; // Allows items to wrap onto the next line
+  gap: 20px; // Space between movie cards
+  justify-content: center; // Center items in the container
+  padding: 20px;
+
+  .movieCard {
+      background-color: #2c2c2c; // Card background color
+      border-radius: 8px;
+      padding: 10px;
+      text-align: center; // Center text for movie details
+      transition: transform 0.2s;
+      width: 320px; // Fixed width for each card
+
+      img {
+          width: 100%; // Responsive image width
+          border-radius: 8px;
+      }
+
+      p {
+          margin: 5px 0; // Margin for text
+          color: #ffffff; // Text color
+      }
+
+      &:hover {
+          transform: scale(1.05); // Slight zoom on hover
+      }
+  }
+}
+
+button {
+  margin: 10px;
+  padding: 10px 15px;
+  background-color: $accent-color;
+  color: $secondary-color;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+
+  &:hover {
+    background-color: lighten($accent-color, 10%);
+  }
+
+  &:focus {
+    box-shadow: 0 0 5px $focus-ring-color;
+  }
+}

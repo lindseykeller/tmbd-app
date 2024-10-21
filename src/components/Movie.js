@@ -89,11 +89,12 @@ function Movie() {
                 <Genres genres = {genres} setGenres = {setGenres} selectedGenres={selectedGenres} setSelectedGenres={setSelectedGenres}/>
                 </div>
               </div>
+              <div className="movieContainer">
                 {
                     movieList.map((movie) => {
                         const movieID = movie.id;
-                    return  (  <>
-                         
+                    return  (     
+                        <div key={movieID} className="movieCard"> 
                         <img src = {`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}/>
                         <p>{movie.original_title}</p>
                         <p>{movie.overview}</p>
@@ -102,12 +103,12 @@ function Movie() {
                         <button>Watch Trailer</button>
                         </AppModal>
                         
-                        </>)  
+                        </div>)  
                       
 })
                
                 }
-           
+           </div>
                     {currentPage > 1 && (
                         <button  onClick = {prevPage} > Back </button>
                     )}
