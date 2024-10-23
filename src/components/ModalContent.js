@@ -55,7 +55,7 @@ const ModalContent = ({ id, onClose }) => {
   }, []);
   
   return ( // Render the component
-    <div ref={trapRef} tabIndex="-1" style={{ outline: 'none' }}>
+    <div ref={trapRef} tabIndex="-1" style={{ outline: 'none', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', marginTop: '200px'}}>
       <iframe
         width="840" // Set iframe width
         height="390" // Set iframe height
@@ -67,7 +67,7 @@ const ModalContent = ({ id, onClose }) => {
         tabIndex="0" // Make the iframe focusable
       ></iframe>
     
-      <button ref={closeButtonRef} onClick={onClose}>Close</button> {/* Button to close the modal */}
+      <button ref={closeButtonRef} onClick={onClose} style={{ marginTop: '50px'}}>Close</button> {/* Button to close the modal */}
     </div>
   );
 };
