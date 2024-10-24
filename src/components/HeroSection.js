@@ -39,19 +39,19 @@ const HeroSection = () => {
           <div
             className="heroSection"
             style={{
-              backgroundImage: `url("https://image.tmdb.org/t/p/w500/${upcomingMovies[0].poster_path}" )`,
+              backgroundImage: `url("https://image.tmdb.org/t/p/w500/${upcomingMovies[0].backdrop_path}" )`,
               backgroundPosition: "bottom",
               backgroundSize: "cover",
             }}
-          ></div>
+          >
           <section>
             <div className="heroInner">
-              <span>
+              {/* <span>
 
                 <img
                   src={`https://image.tmdb.org/t/p/w500/${upcomingMovies[0].poster_path}`}
                 />
-              </span>
+              </span> */}
               <div class ="movie_info_col">
               <h2 lang={upcomingMovies[0].original_language}>{upcomingMovies[0].original_title}</h2>
               <p>{upcomingMovies[1].overview}</p>
@@ -63,6 +63,7 @@ const HeroSection = () => {
               </div>
             </div>
           </section>
+          </div>
         </>
       );
     }

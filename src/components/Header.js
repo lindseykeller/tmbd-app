@@ -7,7 +7,7 @@ const Header = () => {
     <>
       <header>
         <div className="navbar">
-            <h2>Film Finder</h2>
+            <h2>Movies</h2>
           <a href="#home">Movies</a>
           <a href="#news">TV</a>
           <div className="dropdown">

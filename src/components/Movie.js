@@ -107,6 +107,7 @@ function Movie() {
                   <p>{movie.original_title}</p>
                   <p>{movie.overview}</p>
                   <p>{movie.release_date}</p>
+                  {console.log({movie})}
                   <AppModal id={movieID}>
                     <button>Watch Trailer</button>
                   </AppModal>
